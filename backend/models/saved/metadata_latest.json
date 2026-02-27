@@ -1,0 +1,32 @@
+{
+  "r2_score": -0.0001,
+  "mae": 15.03,
+  "rmse": 17.38,
+  "accuracy_pct": -0.0,
+  "model_version": "v100.3",
+  "trained_on": "2026-02-27T22:41:44.897048",
+  "dataset_rows": 8500,
+  "best_model": "RandomForest",
+  "features": [
+    "creation_output",
+    "learning_behavior",
+    "experience_consistency",
+    "economic_activity",
+    "innovation_problem_solving",
+    "collaboration_community",
+    "offline_capability",
+    "digital_presence",
+    "learning_hours",
+    "projects",
+    "behavioral_avg",
+    "output_to_learning_ratio",
+    "consistency_score",
+    "digital_economic_index",
+    "digital_index",
+    "economic_activity_index",
+    "opportunity_gap"
+  ],
+  "samples": 8500,
+  "saved_at": "2026-02-27T22:41:44.927758",
+  "tag": "latest"
+}

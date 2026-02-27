@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: foodscope-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: FOODOSCOPE_TOKEN
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: BACKEND_CORS_ORIGIN
+        value: "*"
+      - key: ENVIRONMENT
+        value: production
