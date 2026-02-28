@@ -7,6 +7,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-# Environment variable default - override in deployment
-ENV PORT=8000
-CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port $PORT"]
+# Flask usually runs on 5000, but Gunicorn will bind to $PORT
+ENV PORT=5000
+CMD ["sh", "-c", "gunicorn --bind 0.0.0.0:$PORT api:app"]

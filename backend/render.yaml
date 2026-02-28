@@ -1,15 +1,13 @@
 services:
   - type: web
-    name: foodscope-backend
+    name: skillgenome-backend
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    startCommand: gunicorn api:app
     envVars:
-      - key: FOODOSCOPE_TOKEN
-        sync: false
-      - key: OPENAI_API_KEY
-        sync: false
       - key: BACKEND_CORS_ORIGIN
         value: "*"
       - key: ENVIRONMENT
         value: production
+      - key: PYTHON_VERSION
+        value: 3.12.0
