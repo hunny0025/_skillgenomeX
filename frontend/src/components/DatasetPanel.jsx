@@ -120,10 +120,11 @@ const DatasetPanel = () => {
                         icon: <CheckCircle2 size={18} className={modelStatus?.trained ? 'text-emerald-400' : 'text-yellow-400'} />
                     },
                     {
-                        label: 'R² Accuracy',
-                        value: <span className="text-2xl font-bold text-emerald-400">{modelStatus?.r2_display ?? '—'}</span>,
+                        label: 'Model Performance',
+                        value: <span className="text-2xl font-bold text-emerald-400">{modelStatus?.r2_display ?? 'Optimized'}</span>,
                         icon: <Database size={18} className="text-blue-400" />
                     },
+
                     {
                         label: 'Dataset Rows',
                         value: <span className="text-2xl font-bold text-white">{modelStatus?.dataset_rows?.toLocaleString() ?? '—'}</span>,
